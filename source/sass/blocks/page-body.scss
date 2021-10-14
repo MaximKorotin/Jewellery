@@ -5,11 +5,11 @@
   height: 100vh;
   margin: 0 auto;
   padding: 0;
-  font-family: "PT Mono", "Courier", monospace;
-  font-weight: 400;
+  font-family: "Poppins",  "Arial", sans-serif;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 22px;
-  color: $basic__light;
+  line-height: 21px;
+  color: $basic__dark;
 
   &--popup {
     overflow: hidden;
