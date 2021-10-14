@@ -1,0 +1,71 @@
+.success {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 728px;
+  height: 444px;
+  margin: auto;
+  padding: 179px 0;
+  background-color: $basic__white;
+  box-sizing: border-box;
+  z-index: 200;
+
+  &--open {
+    display: block;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: auto;
+    max-width: 728px;
+    height: auto;
+    max-height: 444px;
+    padding: 179px 16px;
+  }
+}
+
+.success p {
+  margin: 0 auto;
+  max-width: 399px;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 43px;
+  color: $basic__black;
+  text-align: center;
+}
+
+.success__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: 13px;
+    display: block;
+    width: 23px;
+    height: 1px;
+    background-color: $basic__black;
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.4;
+  }
+}
