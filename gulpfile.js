@@ -67,10 +67,10 @@ gulp.task("webp", function () {
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("source/img/icons/sprite/*.svg")
+  return gulp.src("source/img/icons/*.svg")
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img/icons/sprite"));
+    .pipe(gulp.dest("build/img/icons"));
 });
 
 gulp.task("html", function () {

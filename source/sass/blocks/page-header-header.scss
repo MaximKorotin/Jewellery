@@ -1,0 +1,183 @@
+.page-header__header {
+  display: flex;
+  justify-content: end;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 42px 30px 51px;
+  box-sizing: border-box;
+  z-index: 10;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    padding: 37px 34px 44px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding: 54px 64px 61px;
+  }
+}
+
+.page-header__logo {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  width: 66px;
+  height: 66px;
+  margin: auto;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    top: 20px;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.page-header__logo svg {
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.page-header__logo--opened path,
+.page-header__logo--nojs path {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    fill: $basic__white;
+  }
+}
+
+.page-header__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-header__container a {
+  margin-left: 36px;
+  font-size: 14px;
+  color: $basic__dark;
+}
+
+.page-header__container .page-header__login {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+.page-header__container .page-header__login--opened,
+.page-header__container .page-header__login--nojs {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    position: absolute;
+    bottom: 80px;
+    left: 9px;
+    display: block;
+    font-size: 18px;
+    line-height: 23px;
+    color: $basic__white;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    bottom: 90px;
+    left: 15px;
+    margin-left: 0;
+  }
+}
+
+.page-header__container .page-header__cart {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    position: relative;
+    font-size: 0;
+    color: transparent;
+    border: none;
+  }
+}
+
+.page-header__cart svg {
+  display: none;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    stroke: $basic__dark;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+
+.page-header__cart--opened svg,
+.page-header__cart--nojs svg {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    stroke: $basic__white;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+
+.nav-toggle {
+  display: none;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    display: block;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+.nav-toggle--closed,
+.nav-toggle--opened {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    position: absolute;
+    top: 38px;
+    left: 32px;
+    width: 50px;
+    height: 50px;
+    border: none;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    top: 21px;
+    left: 2px;
+  }
+}
+
+.nav-toggle--nojs {
+  display: none;
+}
+
+.nav-toggle__button {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 25px;
+    height: 18px;
+    border-top: 2px solid $basic__dark;
+    border-bottom: 2px solid $basic__dark;
+    box-sizing: border-box;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $basic__dark;
+    }
+  }
+}
+
+.nav-toggle--opened .nav-toggle__button {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    border-color: $basic__white;
+
+    &::before {
+      background-color: $basic__white;
+    }
+  }
+}

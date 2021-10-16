@@ -1,0 +1,200 @@
+.page-header__main {
+  display: flex;
+  border-top: 1px solid $basic__light-two;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    flex-direction: column;
+    padding: 0 45px;
+    border: none;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    padding: 0 15px;
+  }
+}
+
+.page-header__main .page-header__search,
+.page-header__main .main-nav {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+.page-header__main--opened .page-header__search,
+.page-header__main--nojs .page-header__search,
+.page-header__main--opened .main-nav,
+.page-header__main--nojs .main-nav {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    display: flex;
+  }
+}
+
+.page-header__search {
+  position: absolute;
+  top: 41px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 15px;
+  box-sizing: border-box;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.search__wrapper {
+  width: max-content;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    width: 100%;
+  }
+}
+
+.search__wrapper input {
+  position: relative;
+  min-width: 300px;
+  padding-left: 15px;
+  border: none;
+  outline: none;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $basic__dark;
+  z-index: 10;
+
+  &::placeholder {
+    color: $basic__light;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    color: $basic__white;
+    background-color: transparentize($basic__white, 0.85);
+    border-top-right-radius: 21px;
+    border-bottom-right-radius: 21px;
+
+    &::placeholder {
+      font-size: 0;
+    }
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    min-width: 100%;
+  }
+}
+
+.search__button {
+  position: relative;
+  width: max-content;
+  padding: 1px 0 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  outline: none;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    padding: 2px 0 0 12px;
+    color: $basic__white;
+    background-color: transparentize($basic__white, 0.85);
+    border-top-left-radius: 21px;
+    border-bottom-left-radius: 21px;
+  }
+}
+
+.search__button svg {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.main-nav {
+  margin: 0 auto;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.main-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 14px 0 24px;
+  list-style: none;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    flex-direction: column;
+    width: 100%;
+    padding: 35px 0 0;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    padding: 25px 0 0;
+  }
+}
+
+.main-nav__item {
+  margin: 18px;
+  padding: 0;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    margin: 11px 0 10px;
+  }
+}
+
+.main-nav__link {
+  line-height: 24px;
+  color: $basic__dark;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    font-size: 24px;
+    line-height: 36px;
+    color: $basic__white;
+  }
+}
+
+.main-nav__more {
+  display: none;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    display: block;
+    margin: 0;
+    padding: 10px 0 128px;
+    list-style: none;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    padding: 0 0 128px;
+  }
+}
+
+.more__item {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    margin: 20px 0;
+  }
+}
+
+.more__link {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    font-size: 18px;
+    line-height: 23px;
+    color: $basic__white;
+    opacity: 0.75;
+  }
+}

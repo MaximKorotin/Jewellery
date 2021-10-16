@@ -2,179 +2,30 @@
   position: relative;
   width: 100%;
   margin: 0 auto;
-  background-color: $basic__dark;
-  background-image: url("../img/main-background-desktop.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/main-background-desktop@2x.png");
-  }
-
-  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    background-image: url("../img/main-background-mobile.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/main-background-mobile@2x.png");
-    }
-  }
-
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    background-image: url("../img/main-background-tablet.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/main-background-tablet@2x.png");
-    }
-  }
 }
 
-.page-header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1527px;
-  margin: 0 auto;
-  padding: 33px 30px 173px 90px;
-  transform: translateX(-30px);
-  box-sizing: border-box;
-
-  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    max-width: auto;
-    padding: 17px 15px 10px 17px;
-    transform: translateX(0);
-  }
-
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    max-width: auto;
-    padding: 20px 25px 5px;
-    transform: translateX(0);
-  }
-}
-
-.page-header__logo {
-  min-width: fit-content;
-  height: 100%;
-  margin-left: -4px;
-
+.page-header--opened {
   @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
-    margin-left: 0;
-  }
-
-  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    content: url("../img/logos/logo-header-mobile.svg");
-    margin-right: 20px;
-    margin-left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+    overflow-y: auto;
   }
 }
 
-.page-header__logo img {
-  display: block;
-  min-width: fit-content;
-}
-
-.page-header__container {
-  display: flex;
-  align-items: flex-start;
-  margin-top: 4px;
-
+.page-header--opened .page-header__wrap,
+.page-header--nojs .page-header__wrap {
   @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
-    margin-top: 0;
+    background-color: $basic__accent;
   }
 }
 
-.contacts-header {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 941px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    margin: 0 -12px;
-  }
-
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    margin: 0 -17px;
-  }
-}
-
-.contacts-header__item {
-  margin: 13px 44px;
-  line-height: 18px;
-  color: $basic__white;
-
-  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    margin: 9px 12px;
-  }
-
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    margin: 16px 17px;
-  }
-}
-
-.contacts-header__link {
-  display: flex;
-
-  &:hover,
-  &:focus {
-    color: $basic__accent;
-    outline: none;
-  }
-}
-
-.contacts-header__email svg {
-  margin: 2px 20px 0 0;
-
+.page-header__wrap {
   @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
-    width: 25px;
-    height: 20px;
-    margin: -2px 0 0;
-  }
-}
-
-.contacts-header__phone svg {
-  margin-right: 16px;
-
-  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
-    width: 24px;
-    height: 24px;
-    margin: -4px 0 0;
-  }
-}
-
-.contacts-header__description {
-  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
-    display: none;
-  }
-}
-
-.page-header__request-call {
-  width: 180px;
-  min-width: 180px;
-  min-height: 45px;
-  margin-left: 5px;
-  padding: 14px 0 12px;
-  font-family: "Cormorant Garamond", "Garamond", serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.05em;
-  text-align: center;
-  text-transform: uppercase;
-  color: $basic__white;
-  border: 1px solid $basic__white;
-  box-sizing: border-box;
-  border-radius: 5px;
-
-  &:hover,
-  &:focus {
-    color: $basic__accent;
-    border-color: $basic__accent;
-    outline: none;
-  }
-
-  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
-    display: none;
+    position: relative;
+    width: auto;
+    height: auto;
   }
 }
