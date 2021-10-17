@@ -20,14 +20,17 @@
   const monitorsWindowSize = () => {
     if(window.innerWidth >= 1024) {
       overlay.classList.remove('overlay--open');
+      headerMain.style.marginTop = '';
     } else {
       overlay.classList.add('overlay--open');
+      headerMain.style.marginTop = '10px';
     }
   };
 
   navToggle.addEventListener('click', () => {
     if (headerMain.classList.contains('page-header__main--closed')) {
       window.addEventListener('resize', monitorsWindowSize);
+      headerMain.style.marginTop = '10px';
       body.classList.add('page-body--popup');
       overlay.classList.add('overlay--open');
       header.classList.add('page-header--opened');
@@ -41,6 +44,7 @@
       navToggle.classList.add('nav-toggle--opened');
     } else {
       window.removeEventListener('resize', monitorsWindowSize);
+      headerMain.style.marginTop = '';
       body.classList.remove('page-body--popup');
       overlay.classList.remove('overlay--open');
       header.classList.remove('page-header--opened');

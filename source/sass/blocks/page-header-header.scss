@@ -8,11 +8,11 @@
   z-index: 10;
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    padding: 37px 34px 44px;
+    padding: 37px 34px 34px;
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    padding: 54px 64px 61px;
+    padding: 54px 64px 51px;
   }
 }
 
@@ -24,6 +24,7 @@
   width: 66px;
   height: 66px;
   margin: auto;
+  z-index: 10;
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
     top: 20px;
@@ -55,6 +56,12 @@
   margin-left: 36px;
   font-size: 14px;
   color: $basic__dark;
+  z-index: 10;
+
+  &:hover,
+  &:focus {
+    color: $basic__accent;
+  }
 }
 
 .page-header__container .page-header__login {
@@ -80,6 +87,14 @@
     left: 15px;
     margin-left: 0;
   }
+}
+
+.page-header__container .page-header__login--opened:hover,
+.page-header__container .page-header__login--opened:focus,
+.page-header__container .page-header__login--nojs:hover,
+.page-header__container .page-header__login--nojs:focus {
+  color: $basic__white;
+  opacity: 0.5;
 }
 
 .page-header__container .page-header__cart {
@@ -113,6 +128,24 @@
     stroke-width: 2px;
     stroke-linecap: round;
     stroke-linejoin: round;
+  }
+}
+
+.page-header__cart--opened:hover svg,
+.page-header__cart--opened:focus svg,
+.page-header__cart--nojs:hover svg,
+.page-header__cart--nojs:focus svg {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    color: transparent;
+    stroke: transparentize($basic__white, 0.5);
+  }
+}
+
+.page-header__cart--closed:hover svg,
+.page-header__cart--closed:focus svg {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    color: transparent;
+    stroke: transparentize($basic__dark, 0.5);
   }
 }
 
@@ -159,6 +192,11 @@
     border-top: 2px solid $basic__dark;
     border-bottom: 2px solid $basic__dark;
     box-sizing: border-box;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
 
     &::before {
       content: "";

@@ -1,0 +1,139 @@
+.main-block {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  min-width: 320px;
+  min-height: 463px;
+  margin: 0 auto;
+  background-image: linear-gradient(transparentize($basic__accent-two, 0.3), transparentize($basic__accent-two, 0.3)),
+    url("../img/index-main-image-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(transparentize($basic__accent-two, 0.3), transparentize($basic__accent-two, 0.3)),
+      url("../img/index-main-image-desktop@2x.jpg");
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    background-image: linear-gradient(transparentize($basic__accent-two, 0.3), transparentize($basic__accent-two, 0.3)),
+      url("../img/main-image-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(transparentize($basic__accent-two, 0.3), transparentize($basic__accent-two, 0.3)),
+        url("../img/main-image-mobile@2x.jpg");
+    }
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    background-image: linear-gradient(transparentize($basic__accent-two, 0.3), transparentize($basic__accent-two, 0.3)),
+      url("../img/main-image-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(transparentize($basic__accent-two, 0.3), transparentize($basic__accent-two, 0.3)),
+        url("../img/main-image-tablet@2x.jpg");
+    }
+  }
+}
+
+.main-block--catalog {
+  min-height: 261px;
+  background-image: linear-gradient(transparentize($basic__accent-two, 0.3), transparentize($basic__accent-two, 0.3)),
+    url("../img/catalog-main-image-desktop.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(transparentize($basic__accent-two, 0.3), transparentize($basic__accent-two, 0.3)),
+      url("../img/catalog-main-image-desktop@2x.jpg");
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    background-image: linear-gradient(transparentize($basic__accent-two, 0.3), transparentize($basic__accent-two, 0.3)),
+      url("../img/catalog-main-image-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(transparentize($basic__accent-two, 0.3), transparentize($basic__accent-two, 0.3)),
+        url("../img/catalog-main-image-mobile@2x.jpg");
+    }
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    background-image: linear-gradient(transparentize($basic__accent-two, 0.3), transparentize($basic__accent-two, 0.3)),
+      url("../img/catalog-main-image-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(transparentize($basic__accent-two, 0.3), transparentize($basic__accent-two, 0.3)),
+        url("../img/catalog-main-image-tablet@2x.jpg");
+    }
+  }
+}
+
+.main-block p {
+  margin: 0 0 0 2px;
+  padding: 0;
+  font-family: "Cormorant Garamond", "Garamond", serif;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $basic__white;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    font-size: 38px;
+    line-height: 49px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    margin: 0 18px 0 0;
+  }
+}
+
+.main-block--catalog p {
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0;
+  margin: -2px 0 0;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: -4px 0 0;
+  }
+}
+
+.main-block span {
+  display: block;
+  margin: -6px 0 0 -1px;
+  font-family: "Cormorant Garamond Italic", "Garamond", serif;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 49px;
+  letter-spacing: normal;
+  text-transform: lowercase;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: -7px 0 0 -3px;
+    font-size: 34px;
+    line-height: 44px;
+  }
+}
+
+.main-block--catalog span {
+  margin: 2px 0 0 3px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 29px;
+  text-transform: none;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    max-width: 250px;
+    margin: 3px 0 0 1px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    margin: 2px 0 0;
+  }
+}

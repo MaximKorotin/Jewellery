@@ -1,0 +1,23 @@
+.about-us {
+  margin: 0;
+  margin-left: 72px;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin-left: 0;
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    margin-left: 86px;
+  }
+}
+
+.about-us__item + .about-us__item {
+  margin-top: 21px;
+}
+
+.about-us__link {
+  color: $basic__white;
+}
