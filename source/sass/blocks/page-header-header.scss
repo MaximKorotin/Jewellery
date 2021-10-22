@@ -131,21 +131,21 @@
   }
 }
 
+.page-header__cart--closed:hover svg,
+.page-header__cart--closed:focus svg {
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    color: transparent;
+    stroke: transparentize($basic__dark, 0.5);
+  }
+}
+
 .page-header__cart--opened:hover svg,
 .page-header__cart--opened:focus svg,
 .page-header__cart--nojs:hover svg,
 .page-header__cart--nojs:focus svg {
   @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
     color: transparent;
-    stroke: transparentize($basic__white, 0.5);
-  }
-}
-
-.page-header__cart--closed:hover svg,
-.page-header__cart--closed:focus svg {
-  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
-    color: transparent;
-    stroke: transparentize($basic__dark, 0.5);
+    stroke: transparentize($basic__white, 0.7);
   }
 }
 

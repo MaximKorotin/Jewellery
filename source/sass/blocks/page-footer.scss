@@ -8,17 +8,17 @@
   justify-content: space-between;
   max-width: 1230px;
   margin: 0 auto;
-  padding: 89px 30px 100px;
+  padding: 90px 30px 100px;
   box-sizing: border-box;
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
     flex-direction: column;
-    padding: 51px 15px 63px;
+    padding: 50px 15px 63px;
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     flex-direction: column;
-    padding: 51px 45px 55px;
+    padding: 50px 45px 55px;
   }
 }
 
