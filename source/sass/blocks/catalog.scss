@@ -1,0 +1,38 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 34px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 25px;
+  }
+}
+
+.card__link p {
+  margin: 16px 0 6px;
+  padding: 0 15px;
+  color: $basic__dark;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: 11px 0 4px;
+    padding: 0;
+  }
+}
+
+.card__link span {
+  display: block;
+  margin-bottom: 2px;
+  padding: 0 15px;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.4px;
+  color: $basic__dark;
+}

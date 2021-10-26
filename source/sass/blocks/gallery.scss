@@ -15,8 +15,10 @@
 }
 
 .gallery__container p {
-  margin: 0 1px 60px 0;
+  max-width: 450px;
+  margin: 0 auto 60px;
   padding: 0;
+  transform: translateX(-1px);
   font-family: "Cormorant Garamond", "Garamond", serif;
   font-weight: 700;
   font-size: 34px;
@@ -27,6 +29,7 @@
   color: $basic__dark;
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    max-width: 100%;
     margin-bottom: 46px;
   }
 }
@@ -49,6 +52,11 @@
   color: $basic__dark;
   border-bottom: 1px solid $basic__accent;
 
+  &:hover,
+  &:focus {
+    color: $basic__accent;
+  }
+
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
     margin-top: 19px;
   }
@@ -65,21 +73,21 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 19.659% 34.103% 19.659% 19.659%;
+  grid-template-columns: 19.66% 34.1% 19.66% 19.66%;
   column-gap: 27px;
   row-gap: 34px;
   justify-content: center;
   list-style: none;
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    grid-template-columns: 45.863% 45.863%;
+    grid-template-columns: 45.86% 45.86%;
     grid-template-rows: 36.5% 23.9% 24%;
     column-gap: 24px;
     row-gap: 27px;
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    grid-template-columns: 19.617% 34.071% 19.617% 19.617%;
+    grid-template-columns: 19.62% 34.07% 19.62% 19.62%;
     column-gap: 16px;
     row-gap: 20px;
   }

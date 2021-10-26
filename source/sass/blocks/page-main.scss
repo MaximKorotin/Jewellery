@@ -1,3 +1,20 @@
 .page-main {
   margin: 0 auto;
 }
+
+.page-main__wrapper {
+  display: flex;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 30px 33px;
+  box-sizing: border-box;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    flex-direction: column;
+    padding: 0 45px 33px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    padding: 0 15px 33px;
+  }
+}

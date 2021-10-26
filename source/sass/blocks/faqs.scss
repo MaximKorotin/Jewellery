@@ -15,8 +15,10 @@
 }
 
 .faqs__title {
-  margin: 0 0 47px 2px;
-  padding: 0;
+  max-width: 550px;
+  margin: 0 auto 47px;
+  padding: 0 25px;
+  transform: translateX(1px);
   text-align: center;
   font-family: "Cormorant Garamond", "Garamond", serif;
   font-weight: 700;
@@ -118,7 +120,8 @@
   }
 }
 
-.faq--active .faq__title::before {
+.faq--active .faq__title::before,
+.faq--nojs .faq__title::before {
   content: url("../img/icons/arrow-top-icon.svg");
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
@@ -145,7 +148,15 @@
 
 .faq--return .faq__title {
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    padding-right: 60px;
+    padding-right: 55px;
+  }
+}
+
+.faq--return br {
+  display: none;
+
+  @media (min-width: $mobile-width) and (max-width: 325px) {
+    display: block;
   }
 }
 
@@ -173,11 +184,12 @@
 
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     max-width: 530px;
-    margin: 26px 0 0 0px;
+    margin: 26px 0 0;
     padding: 0 80px 0 0;
   }
 }
 
-.faq--active .faq__description {
+.faq--active .faq__description,
+.faq--nojs .faq__description {
   display: block;
 }

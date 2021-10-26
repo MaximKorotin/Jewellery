@@ -93,8 +93,10 @@
 .page-header__container .page-header__login--opened:focus,
 .page-header__container .page-header__login--nojs:hover,
 .page-header__container .page-header__login--nojs:focus {
-  color: $basic__white;
-  opacity: 0.5;
+  @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
+    color: $basic__white;
+    opacity: 0.5;
+  }
 }
 
 .page-header__container .page-header__cart {

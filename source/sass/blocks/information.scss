@@ -1,4 +1,5 @@
 .information {
+  max-width: 170px;
   margin: 0;
   margin-left: 30px;
   padding: 0;
@@ -9,6 +10,7 @@
   }
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    max-width: 100%;
     margin-bottom: 41px;
   }
 }

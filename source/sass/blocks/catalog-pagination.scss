@@ -1,0 +1,77 @@
+.pagination {
+  border-top: 1px solid $basic__light-two;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    border: none;
+  }
+}
+
+.pagination__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 36px 30px 75px 330px;
+  box-sizing: border-box;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    padding: 8px 15px 65px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding: 36px 45px 75px;
+  }
+}
+
+.pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 64px 0 30px;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: 0 auto;
+  }
+}
+
+.pagination__link {
+  padding: 0 6.5px;
+  color: $basic__light;
+
+  &--active {
+    color: $basic__dark;
+  }
+
+  &:hover,
+  &:focus {
+    color: $basic__accent;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    padding: 0 11.5px;
+  }
+}
+
+.pagination__arrow {
+  max-width: 150px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $basic__dark;
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $basic__accent;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    display: none;
+  }
+}

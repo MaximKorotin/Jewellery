@@ -1,0 +1,69 @@
+.webpages {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $basic__accent;
+}
+
+.webpages__wrapper {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.webpages__title {
+  width: fit-content;
+  margin: 0 auto 50px;
+  font-family: "Cormorant Garamond", "Garamond", serif;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $basic__white;
+  border-bottom: 3px solid $basic__white;
+}
+
+.webpages__item::marker {
+  font-family: "Cormorant Garamond Italic", "Garamond", serif;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 49px;
+  color: $basic__white;
+}
+
+.webpages__item + .webpages__item {
+  margin-top: 30px;
+}
+
+.webpages__description {
+  font-family: "Cormorant Garamond Italic", "Garamond", serif;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 49px;
+  color: $basic__white;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+.webpages__link {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 44px;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    display: block;
+  }
+}
