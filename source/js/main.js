@@ -39,18 +39,9 @@
     }
   };
 
-  /*Функция добавляющая отступ при изменении разрешения экрана*/
-  const monitorsWindowSizeHeaderMain = () => {
-    if (window.innerWidth >= 1024) {
-      headerMain.style.marginTop = '';
-    } else {
-      headerMain.style.marginTop = '10px';
-    }
-  };
-
   /*Функция закрывающая меню навигации*/
   const closesdNavigation = () => {
-    window.removeEventListener('resize', monitorsWindowSizeOverlay, monitorsWindowSizeHeaderMain);
+    window.removeEventListener('resize', monitorsWindowSizeOverlay);
     headerMain.style.marginTop = '';
     overlay.classList.remove('overlay--open');
     header.classList.remove('page-header--opened');
@@ -67,7 +58,7 @@
   /*Открытие, закрытие меню навигации*/
   navToggle.addEventListener('click', () => {
     if (headerMain.classList.contains('page-header__main--closed')) {
-      window.addEventListener('resize', monitorsWindowSizeOverlay, monitorsWindowSizeHeaderMain);
+      window.addEventListener('resize', monitorsWindowSizeOverlay);
       headerMain.style.marginTop = '10px';
       body.classList.add('page-body--popup');
       overlay.classList.add('overlay--open');
@@ -154,8 +145,6 @@
     }
   }
 
-  /*global Swiper*/
-  /*eslint no-undef: "error"*/
   /*Добавляет и отслеживает слайдер Swiper*/
   if (sliderSwiper) {
     sliderSwiper.querySelector('.slider__container').classList.remove('slider__container--nojs');
@@ -170,7 +159,7 @@
       elem.classList.remove('swiper-slide--invisible-tablet');
     });
 
-    const swiper = new Swiper('.swiper', {
+    const swiper = new window.Swiper('.swiper', {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

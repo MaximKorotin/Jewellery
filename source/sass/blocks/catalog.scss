@@ -14,21 +14,24 @@
   }
 }
 
+.card__link img {
+  display: block;
+  width: 100%;
+  background-color: $basic__light;
+}
+
 .card__link p {
-  margin: 16px 0 6px;
-  padding: 0 15px;
+  margin: 21px 0 6px;
   color: $basic__dark;
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    margin: 11px 0 4px;
-    padding: 0;
+    margin: 16px 0 4px;
   }
 }
 
 .card__link span {
   display: block;
-  margin-bottom: 2px;
-  padding: 0 15px;
+  margin-bottom: 3px;
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
