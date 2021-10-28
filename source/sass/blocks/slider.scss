@@ -87,8 +87,11 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: -73px;
+  top: -69px;
+  padding: 0;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
     display: none;

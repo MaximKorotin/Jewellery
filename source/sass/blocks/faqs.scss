@@ -80,11 +80,11 @@
   }
 }
 
-.faqs__item + .faqs__item {
+.faq + .faq {
   border-top: 1px solid $basic__accent;
 }
 
-.faq__title {
+.faq h3 {
   position: relative;
   margin: 0;
   padding: 0 101px 0 0;
@@ -120,8 +120,8 @@
   }
 }
 
-.faq--active .faq__title::before,
-.faq--nojs .faq__title::before {
+.faq--active h3::before,
+.faq--nojs h3::before {
   content: url("../img/icons/arrow-top-icon.svg");
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
@@ -134,19 +134,19 @@
   }
 }
 
-.faq--countries .faq__title {
+.faq--countries h3 {
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
     padding-right: 110px;
   }
 }
 
-.faq--payment .faq__title {
+.faq--payment h3 {
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
     padding-right: 90px;
   }
 }
 
-.faq--return .faq__title {
+.faq--return h3 {
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
     padding-right: 55px;
   }
@@ -166,7 +166,7 @@
   }
 }
 
-.faq__description {
+.faq p {
   display: none;
   max-width: 520px;
   margin: 9px 0 0 6px;
@@ -189,7 +189,7 @@
   }
 }
 
-.faq--active .faq__description,
-.faq--nojs .faq__description {
+.faq--active p,
+.faq--nojs p {
   display: block;
 }

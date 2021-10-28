@@ -79,6 +79,13 @@ gulp.task("sprite", function () {
     .pipe(gulp.dest("build/img/icons"));
 });
 
+gulp.task("sprite-logos", function () {
+  return gulp.src("source/img/logos/*.svg")
+    .pipe(svgstore({inlineSvg: true}))
+    .pipe(rename("sprite-logos.svg"))
+    .pipe(gulp.dest("build/img/logos"));
+});
+
 gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(posthtml([
@@ -102,5 +109,5 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "images", "webp", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "images", "webp", "sprite", "sprite-logos", "html"));
 gulp.task("start", gulp.series("build", "server"));
