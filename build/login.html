@@ -16,8 +16,8 @@
   <header class="page-header page-header--nojs">
     <div class="page-header__wrap">
       <div class="page-header__header">
-        <a href="main.html" class="page-header__logo page-header__logo--nojs" aria-label="logo CH">
-          <svg width="66" height="66" fill="currentColor">
+        <a href="main.html" class="page-header__logo page-header__logo--nojs">
+          <svg width="66" height="66" fill="currentColor" role="img" aria-label="logo CH">
             <use href="img/logos/sprite-logos.svg#logo"></use>
           </svg>
         </a>
@@ -116,7 +116,7 @@
         <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
           <div class="subscription__container">
             <label class="visually-hidden" for="subscription">subscription</label>
-            <input type="email" name="subscription" id="subscription" placeholder="Your E-mail">
+            <input type="email" name="subscription" id="subscription" placeholder="Your E-mail" required="">
           </div>
           <button class="subscription__button" type="submit">
             <span>Sign&nbsp;Up</span>

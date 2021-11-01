@@ -1,6 +1,6 @@
 .page-header__header {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   max-width: 1230px;
   margin: 0 auto;
   padding: 42px 30px 51px;
@@ -208,11 +208,6 @@
     border-bottom: 2px solid $basic__dark;
     box-sizing: border-box;
 
-    &:hover,
-    &:focus {
-      opacity: 0.5;
-    }
-
     &::before {
       content: "";
       position: absolute;
@@ -223,6 +218,13 @@
       background-color: $basic__dark;
     }
   }
+}
+
+.nav-toggle--closed:hover .nav-toggle__button,
+.nav-toggle--closed:focus .nav-toggle__button,
+.nav-toggle--opened:hover .nav-toggle__button,
+.nav-toggle--opened:focus .nav-toggle__button {
+  opacity: 0.5;
 }
 
 .nav-toggle--opened .nav-toggle__button {

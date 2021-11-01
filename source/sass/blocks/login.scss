@@ -63,7 +63,7 @@
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
     width: 100%;
     max-width: 442px;
-    padding: 129px 15px 45px;
+    padding: 121px 15px 39px;
     background-image: none;
 
     &::before {
@@ -115,6 +115,11 @@
     color: $basic__accent;
   }
 
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    top: 7px;
+    right: 7px;
+  }
+
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
     width: 35px;
     height: 35px;
@@ -150,6 +155,10 @@
 
 .login-popap--active .login__title {
   margin: 0 0 23px;
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    margin: 0 0 19px;
+  }
 }
 
 .login-form {
@@ -180,7 +189,7 @@
   margin-top: 25px;
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    margin-top: 21px;
+    margin-top: 22px;
   }
 }
 
@@ -197,6 +206,7 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid $basic__dark;
+  border-radius: 0;
   outline: none;
 
   &::placeholder {
@@ -209,13 +219,17 @@
       color: $basic__dark;
     }
   }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    padding: 8px 0;
+  }
 }
 
 .login-form__field--password {
   padding-bottom: 24px;
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    padding-bottom: 20px;
+    padding-bottom: 23px;
   }
 }
 
@@ -236,6 +250,10 @@
   &:hover,
   &:focus {
     color: $basic__dark;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
+    right: 0;
   }
 }
 
@@ -261,7 +279,8 @@
   }
 
   @media (min-width: $mobile-width) and (max-width: $mobile-max-width) {
-    margin-top: 36px;
+    margin-top: 35px;
+    padding: 22.5px;
   }
 }
 

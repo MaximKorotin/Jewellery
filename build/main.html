@@ -16,8 +16,8 @@
   <header class="page-header page-header--nojs">
     <div class="page-header__wrap">
       <div class="page-header__header">
-        <a class="page-header__logo page-header__logo--main page-header__logo--nojs" aria-label="logo CH">
-          <svg width="66" height="66" fill="currentColor">
+        <a class="page-header__logo page-header__logo--main page-header__logo--nojs">
+          <svg width="66" height="66" fill="currentColor" role="img" aria-label="logo CH">
             <use href="img/logos/sprite-logos.svg#logo"></use>
           </svg>
         </a>
@@ -334,19 +334,19 @@
       <h2 class="faqs__title">Frequently asked questions</h2>
       <ul class="faqs__list">
         <li class="faqs__item faq faq--nojs faq--materials">
-          <h3>What materials are the jewellery made of?</h3>
+          <h3 tabindex="0">What materials are the jewellery made of?</h3>
           <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
         <li class="faqs__item faq faq--nojs faq--countries">
-          <h3>Which countries do you deliver to?</h3>
+          <h3 tabindex="0">Which countries do you deliver to?</h3>
           <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
         <li class="faqs__item faq faq--nojs faq--payment">
-          <h3>What are the payment methods?</h3>
+          <h3 tabindex="0">What are the payment methods?</h3>
           <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
         <li class="faqs__item faq faq--nojs faq--return">
-          <h3>Can I return the <br>jewellery if it didn’t fit me?</h3>
+          <h3 tabindex="0">Can I return the <br>jewellery if it didn’t fit me?</h3>
           <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
       </ul>
@@ -432,7 +432,7 @@
         <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
           <div class="subscription__container">
             <label class="visually-hidden" for="subscription">subscription</label>
-            <input type="email" name="subscription" id="subscription" placeholder="Your E-mail">
+            <input type="email" name="subscription" id="subscription" placeholder="Your E-mail" required="">
           </div>
           <button class="subscription__button" type="submit">
             <span>Sign&nbsp;Up</span>
@@ -511,26 +511,26 @@
 
   <section class="login login-popap">
     <div class="login__wrapper">
-      <button class="login-popap__button-close" type="button" aria-label="Close">
-        <svg width="14" height="14" fill="currentColor">
-          <use xlink:href="img/icons/sprite.svg#cross-login-icon"></use>
-        </svg>
-      </button>
       <h2 class="login__title">Log in</h2>
-      <form class="login-form" method="post" action="https://echo.htmlacademy.ru/">
+      <form class="login-form" method="post" action="https://echo.htmlacademy.ru/" tabindex="0">
         <div class="login-form__field">
           <label class="visually-hidden" for="email-login">Your e-mail</label>
-          <input id="email-login" type="email" name="email-login" placeholder="Your E-mail" required="required">
+          <input id="email-login" type="email" name="email-login" placeholder="Your E-mail" required="">
         </div>
         <div class="login-form__field login-form__field--password">
           <label class="visually-hidden" for="password">Password</label>
-          <input id="password" type="password" name="password" placeholder="Password" required="required">
+          <input id="password" type="password" name="password" placeholder="Password" required="">
           <a class="login-form__link-password" href="#">Forgot your password?</a>
         </div>
 
         <button class="login-form__button" type="submit">Log In</button>
         <p>Don’t have an account? <a class="login-form__link-sign-up" href="#">Sign up</a></p>
       </form>
+      <button class="login-popap__button-close" type="button" aria-label="Close">
+        <svg width="14" height="14" fill="currentColor">
+          <use xlink:href="img/icons/sprite.svg#cross-login-icon"></use>
+        </svg>
+      </button>
     </div>
   </section>
 

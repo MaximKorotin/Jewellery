@@ -16,8 +16,8 @@
   <header class="page-header page-header--nojs">
     <div class="page-header__wrap">
       <div class="page-header__header">
-        <a href="main.html" class="page-header__logo page-header__logo--nojs" aria-label="logo CH">
-          <svg width="66" height="66" fill="currentColor">
+        <a href="main.html" class="page-header__logo page-header__logo--nojs">
+          <svg width="66" height="66" fill="currentColor" role="img" aria-label="logo CH">
             <use href="img/logos/sprite-logos.svg#logo"></use>
           </svg>
         </a>
@@ -364,7 +364,7 @@
         <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
           <div class="subscription__container">
             <label class="visually-hidden" for="subscription">subscription</label>
-            <input type="email" name="subscription" id="subscription" placeholder="Your E-mail">
+            <input type="email" name="subscription" id="subscription" placeholder="Your E-mail" required="">
           </div>
           <button class="subscription__button" type="submit">
             <span>Sign&nbsp;Up</span>
@@ -443,13 +443,8 @@
 
   <section class="login login-popap">
     <div class="login__wrapper">
-      <button class="login-popap__button-close" type="button" aria-label="Close">
-        <svg width="14" height="14" fill="currentColor">
-          <use xlink:href="img/icons/sprite.svg#cross-login-icon"></use>
-        </svg>
-      </button>
       <h2 class="login__title">Log in</h2>
-      <form class="login-form" method="post" action="https://echo.htmlacademy.ru/">
+      <form class="login-form" method="post" action="https://echo.htmlacademy.ru/" tabindex="0">
         <div class="login-form__field">
           <label class="visually-hidden" for="email-login">Your e-mail</label>
           <input id="email-login" type="email" name="email-login" placeholder="Your E-mail" required="required">
@@ -462,6 +457,11 @@
         <button class="login-form__button" type="submit">Log In</button>
         <p>Don’t have an account? <a class="login-form__link-sign-up" href="#">Sign up</a></p>
       </form>
+      <button class="login-popap__button-close" type="button" aria-label="Close">
+        <svg width="14" height="14" fill="currentColor">
+          <use xlink:href="img/icons/sprite.svg#cross-login-icon"></use>
+        </svg>
+      </button>
     </div>
   </section>
 

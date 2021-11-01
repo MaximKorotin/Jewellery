@@ -1,6 +1,11 @@
 .page-header__main {
+  position: relative;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 30px;
   display: flex;
   border-top: 1px solid $basic__light-two;
+  box-sizing: border-box;
 
   @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
     flex-direction: column;
@@ -31,15 +36,14 @@
 
 .page-header__search {
   position: absolute;
-  top: 41px;
+  top: -74px;
   left: 0;
-  right: 0;
   display: flex;
   flex-direction: row-reverse;
   justify-content: left;
   max-width: 1200px;
   margin: auto;
-  padding-left: 15px;
+  padding-left: 30px;
   box-sizing: border-box;
 
   @media (min-width: $mobile-width) and (max-width: $tablet-max-width) {
@@ -59,10 +63,12 @@
 }
 
 .search__wrapper input {
+  appearance: none;
   position: relative;
   min-width: 300px;
   padding-left: 15px;
   border: none;
+  border-radius: 0;
   outline: none;
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
@@ -97,6 +103,7 @@
 .search__button {
   position: relative;
   width: max-content;
+  margin: 0;
   padding: 1px 0 0;
   background-color: transparent;
   border: none;
